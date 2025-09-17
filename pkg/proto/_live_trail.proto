@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package fr24.feed.api.v1;
+option go_package = "github.com/igolaizola/fr24/pkg/proto";
+
+import "fr24/proto/_common.proto";
+
+message LiveTrailRequest {
+    fixed32 flight_id = 1;
+}
+
+message LiveTrailResponse {
+    repeated _common.RadarHistoryRecord radar_records_list = 1; // ?
+}

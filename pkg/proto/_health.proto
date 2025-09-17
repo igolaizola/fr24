@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package fr24.feed.api.v1;
+option go_package = "github.com/igolaizola/fr24/pkg/proto";
+
+message Ping {
+    uint32 a = 1;
+    uint32 b = 2;
+}
+
+message Pong {
+    uint32 c = 1;
+}

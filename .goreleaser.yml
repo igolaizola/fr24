@@ -1,0 +1,14 @@
+builds:
+  - id: fr24
+    binary: fr24
+    main: ./cmd/fr24
+    goarch:
+      - amd64
+      - arm64
+      - arm
+archives:
+  - id: fr24
+    builds:
+      - fr24
+    format: zip
+    name_template: 'fr24_{{ .Version }}_{{- if eq .Os "darwin" }}macos{{- else }}{{ .Os }}{{ end }}_{{ .Arch }}'
